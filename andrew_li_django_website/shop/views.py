@@ -1,3 +1,4 @@
+""" This models will not be used as the shopping cart is not being used """
 from django.shortcuts import render, redirect, get_object_or_404
 from shop.models import Item, OrderItem, Order
 from django.views.generic import ListView, DetailView
@@ -72,6 +73,8 @@ def add_to_cart(request, slug):
 
     else:
         ordered_date = timezone.now()
-        order = Order.items.create(user=request.user, ordered_date=ordered_date)
+        order = Order.items.create(
+            user=request.user, ordered_date=ordered_date
+        )
         order.items.add(order_item)
     return redirect("product", slug=slug)

@@ -2,6 +2,7 @@ from django.contrib import admin
 from login.models import UserProfile
 from shop.models import Item, OrderItem, Order
 
+
 class UserProfileAdmin(admin.ModelAdmin):
     list_display = ('user', 'email')
 

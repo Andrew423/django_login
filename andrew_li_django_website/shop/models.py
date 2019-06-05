@@ -1,8 +1,10 @@
+""" This models will not be used as the shopping cart is not being used """
 from django.db import models
 from django.contrib.auth.models import User
 from django.conf import settings
 from django.shortcuts import reverse
 
+# possible shopping catagories
 CATEGORY_CHOICES = (
     ('Tech', 'Technology'),
     ('Access', 'Accessories'),
@@ -20,9 +22,15 @@ class Item(models.Model):
     title = models.CharField(max_length=100)
     description = models.TextField(max_length=2500)
     price = models.DecimalField(max_digits=6, decimal_places=2)
-    discounted_price = models.DecimalField(max_digits=6, decimal_places=2, blank=True, null=True)
+    discounted_price = models.DecimalField(
+        max_digits=6, decimal_places=2,
+        blank=True, null=True
+    )
     category = models.CharField(choices=CATEGORY_CHOICES, max_length=50)
-    label = models.CharField(choices=LABEL_CHOICES, max_length=1, blank=True, null=True)
+    label = models.CharField(
+        choices=LABEL_CHOICES, max_length=1,
+        blank=True, null=True
+    )
     slug = models.SlugField()
 
     def __str__(self):
@@ -48,7 +56,9 @@ class OrderItem(models.Model):
 
 
 class Order(models.Model):
-    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+    user = models.ForeignKey(
+        settings.AUTH_USER_MODEL, on_delete=models.CASCADE
+    )
     items = models.ManyToManyField(OrderItem)
     start_date = models.DateTimeField(auto_now_add=True)
     ordered_date = models.DateTimeField()

@@ -1,6 +1,8 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth import update_session_auth_hash
-from django.contrib.auth.forms import UserCreationForm, UserChangeForm, PasswordChangeForm
+from django.contrib.auth.forms import (
+    UserCreationForm, UserChangeForm, PasswordChangeForm
+)
 from django.contrib.auth.models import User
 from login.forms import (
     RegistrationForm, EditProfileForm
@@ -22,9 +24,14 @@ def home_redirect(request):
 
 def register(request):
 
-# TODO: change redirects to render with messages
     if request.user.is_authenticated:
-        extra_context = {'extra_context':{'message':'True','message_title':'Warning: ','message_text':'You are already logged in'}}
+        extra_context = {
+            'extra_context': {
+                'message': 'True',
+                'message_title': 'Warning: ',
+                'message_text': 'You are already logged in'
+            }
+        }
         return render(request, 'login/home.html', extra_context)
 
     if request.method == 'POST':
@@ -35,14 +42,14 @@ def register(request):
             return redirect('home')
     else:
         form = RegistrationForm()
-        args = {'form':form}
+        args = {'form': form}
 
         return render(request, 'login/register.html', args)
 
 
 @login_required
 def profile(request):
-    args = {'user':request.user}
+    args = {'user': request.user}
 
     return render(request, 'login/profile.html', args)
 

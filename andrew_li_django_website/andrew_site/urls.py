@@ -16,7 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from django.contrib.auth.views import (
-    LoginView, LogoutView, PasswordResetView, 
+    LoginView, LogoutView, PasswordResetView,
     PasswordResetConfirmView, PasswordResetDoneView, PasswordResetCompleteView,
 )
 from login import views as user_views
@@ -32,13 +32,43 @@ urlpatterns = [
     path('register/', user_views.register, name="register"),
     path('profile/', user_views.profile, name='profile'),
     path('profile/edit/', user_views.edit_profile, name='edit_profile'),
-    path('profile/password/', user_views.changepassword, name='changepassword'),
-    path('login/', LoginView.as_view(template_name='login/login.html', redirect_authenticated_user=True), name="login"),
-    path('logout/', LogoutView.as_view(template_name='login/home.html'), {'extra_context':{'message':'True','message_title':'Logout','message_text':'You have logged out successfully'}}, name="logout"),
-    path('reset_password/', PasswordResetView.as_view(template_name='login/resetpassword.html', email_template_name='login/reset_password_email.html'), name="password_reset"),
-    path('reset_password/done/', PasswordResetDoneView.as_view(template_name='login/text.html'), name="password_reset_done"),
-    path('reset_password/complete/', PasswordResetCompleteView.as_view(template_name='login/home.html'), name="password_reset_complete"),
-    path('reset_password/<uidb64>/<token>/', PasswordResetConfirmView.as_view(template_name='login/resetpassword.html'), name="password_reset_confirm"),
+    path('profile/password/', user_views.changepassword, name="c"
+                                                              "h"
+                                                              "a"
+                                                              "n"
+                                                              "g"
+                                                              "e"
+                                                              "p"
+                                                              "a"
+                                                              "s"
+                                                              "s"
+                                                              "w"
+                                                              "o"
+                                                              "r"
+                                                              "d"),
+    path('login/', LoginView.as_view(
+        template_name="login/login.html",
+        redirect_authenticated_user=True
+    ), name="login"),
+    path('logout/', LogoutView.as_view(template_name='login/home.html'), {
+        'extra_context': {
+            'message': 'True', 'message_title': 'Logout',
+            'message_text': 'You have logged out successfully'
+        }
+    }, name="logout"),
+    path('reset_password/', PasswordResetView.as_view(
+        template_name='login/resetpassword.html',
+        email_template_name='login/reset_password_email.html'
+    ), name="password_reset"),
+    path('reset_password/done/', PasswordResetDoneView.as_view(
+        template_name='login/text.html'
+    ), name="password_reset_done"),
+    path('reset_password/complete/', PasswordResetCompleteView.as_view(
+        template_name='login/home.html'
+    ), name="password_reset_complete"),
+    path('reset_password/<uidb64>/<token>/', PasswordResetConfirmView.as_view(
+        template_name='login/resetpassword.html'
+    ), name="password_reset_confirm"),
 
     # shop
     path('secret_passage/', shop_views.secret, name='secret_passage'),
