@@ -51,4 +51,8 @@
 
 ## 0.10 (2019.06.04)
 
- * updated and finished shopping cart
+ * updated shopping cart
+
+## 0.10 (2019.06.04)
+
+ * branched hand-in project and master branch w/ shopping cart

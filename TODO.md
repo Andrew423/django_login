@@ -14,11 +14,11 @@
 
  [x] - Added password reset
 
- [ ] - Add shopping cart options (if enough time)
+ [/] - Add shopping cart options (if enough time)
 
- [ ] - Search items in inventory
+ [/] - Search items in inventory
 
- [ ] - Update templates (again)
+ [/] - Update templates (again)
 
  [ ] - Alpha testing
 

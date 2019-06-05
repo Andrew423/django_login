@@ -25,6 +25,15 @@ def product(request):
 
 
 @login_required
+def secret(request):
+
+    context = {
+        'page': 'shop'
+    }
+
+    return render(request, 'shop/secret.html', context)
+
+@login_required
 def checkout(request):
 
     context = {
