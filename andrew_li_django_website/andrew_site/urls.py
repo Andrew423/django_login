@@ -14,19 +14,21 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 from django.contrib.auth.views import (
     LoginView, LogoutView, PasswordResetView, 
     PasswordResetConfirmView, PasswordResetDoneView, PasswordResetCompleteView,
 )
 from login import views as user_views
 from shop import views as shop_views
-from shop.views import ItemsView, ItemDetailView, add_to_cart
+from shop.views import ItemsView, ItemDetailView, add_to_cart, checkout
+
 
 # TODO: 404 errors
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('accounts/', include('allauth.urls')),
     path('', user_views.home, name='home'),
     path('home/', user_views.home_redirect, name='home_redirect'),
     path('register/', user_views.register, name="register"),
@@ -43,7 +45,7 @@ urlpatterns = [
     # shop
     path('shop/', ItemsView.as_view(), name='item_list'),
     path('shop/product/<slug>/', ItemDetailView.as_view(), name='product'),
-    path('shop/checkout/', shop_views.checkout, name='checkout'),
-    path('shop/add-to-cart/', shop_views.add_to_cart, name='add-to-cart'),
+    path('shop/checkout/', checkout, name='checkout'),
+    path('shop/add-to-cart/', add_to_cart, name='add-to-cart'),
 
 ]

@@ -37,8 +37,14 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.sites',
+
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
     'captcha',
     'crispy_forms',
+
 ]
 
 MIDDLEWARE = [
@@ -146,3 +152,11 @@ RECAPTCHA_PRIVATE_KEY = '6LeII6YUAAAAAIlrhWPw1V0e8JeOdgyrbLiYufCf'
 # temp email server
 EMAIL_HOST = 'localhost'
 EMAIL_PORT = 1025
+
+AUTHENTICATION_BACKENDS = (
+    'django.contrib.auth.backends.ModelBackend',
+
+    'allauth.account.auth_backends.AuthenticationBackend',
+)
+
+SITE_ID = 1
