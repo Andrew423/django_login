@@ -15,6 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.conf.urls import handler400, handler403, handler404, handler500
 from django.contrib.auth.views import (
     LoginView, LogoutView, PasswordResetView,
     PasswordResetConfirmView, PasswordResetDoneView, PasswordResetCompleteView,
@@ -23,7 +24,10 @@ from login import views as user_views
 from shop import views as shop_views
 from shop.views import ItemsView, ItemDetailView, add_to_cart
 
-# TODO: 404 errors
+handler404 = user_views.handler404
+handler400 = user_views.handler400
+handler403 = user_views.handler403
+handler500 = user_views.handler500
 
 urlpatterns = [
     path('admin/', admin.site.urls),
