@@ -90,6 +90,7 @@ def changepassword(request):
         return render(request, 'login/changepassword.html', args)
 
 
+# error handling
 def handler404(request):
     return render(request, 'error/404.html', status=404)
 

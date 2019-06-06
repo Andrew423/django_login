@@ -2,7 +2,11 @@
 
 ## About
 This is my second Django project transferred on to the second, school account and is a login app.
-It is also being expanded to include a shopping cart option.
+At the moment, you can login and read the manifesto.
+
+It is also being expanded to include a shopping cart option,
+however, at this time, this version/branch does not contain a working shopping cart.
+This means the **Shopping** and **My Cart** navigation links to nowhere.
 
 ## How to use
 To start, install the required packages using the requirement.txt

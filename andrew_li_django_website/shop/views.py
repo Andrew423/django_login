@@ -1,4 +1,4 @@
-""" This models will not be used as the shopping cart is not being used """
+""" This views will not be used as the shopping cart is not being used """
 from django.shortcuts import render, redirect, get_object_or_404
 from shop.models import Item, OrderItem, Order
 from django.views.generic import ListView, DetailView
@@ -33,6 +33,7 @@ def secret(request):
     }
 
     return render(request, 'shop/secret.html', context)
+
 
 @login_required
 def checkout(request):

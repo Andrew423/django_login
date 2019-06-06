@@ -1,3 +1,4 @@
+""" This admin panel will not be used as the shopping cart is not being used """
 from django.contrib import admin
 from login.models import UserProfile
 from shop.models import Item, OrderItem, Order
