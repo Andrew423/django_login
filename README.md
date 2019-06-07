@@ -8,6 +8,9 @@ It is also being expanded to include a shopping cart option,
 however, at this time, this version/branch does not contain a working shopping cart.
 This means the **Shopping** and **My Cart** navigation links to nowhere.
 
+If there are any bugs, please start an issue in the issues tab
+Thanks - Andrew
+
 ## How to use
 To start, install the required packages using the requirement.txt
 This step will require the [virtual ven module](https://docs.python.org/3/library/venv.html) (this might require admin access)
