@@ -52,7 +52,8 @@
 ## 0.10 (2019.06.04)
 
  * updated shopping cart
+ * branched hand-in project and master branch w/out shopping cart
 
-## 0.10 (2019.06.04)
+## 0.11 (2019.06.09)
 
- * branched hand-in project and master branch w/ shopping cart
+ * fixed registration and password reset 500 error bug

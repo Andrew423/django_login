@@ -25,10 +25,10 @@ from shop import views as shop_views
 from shop.views import ItemsView, ItemDetailView, add_to_cart
 
 # error handling redirects
-handler404 = user_views.handler404
-handler400 = user_views.handler400
-handler403 = user_views.handler403
-handler500 = user_views.handler500
+# handler404 = user_views.handler404
+# handler400 = user_views.handler400
+# handler403 = user_views.handler403
+# handler500 = user_views.handler500
 
 urlpatterns = [
 

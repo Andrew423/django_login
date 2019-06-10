@@ -20,13 +20,13 @@
 
  [/] - Update templates (again)
 
- [ ] - Alpha testing
+ [x] - Alpha testing
 
 ## Results:
 
- [ ] - Publish on AWS
+ [/] - Publish on AWS (this was more complicated than I realised)
 
- [ ] - Beta testing
+ [x] - Beta testing
 
 ## Results:
 

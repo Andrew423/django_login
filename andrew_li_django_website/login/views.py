@@ -42,9 +42,9 @@ def register(request):
             return redirect('home')
     else:
         form = RegistrationForm()
-        args = {'form': form}
+    args = {'form': form}
 
-        return render(request, 'login/register.html', args)
+    return render(request, 'login/register.html', args)
 
 
 @login_required
@@ -85,9 +85,9 @@ def changepassword(request):
 
     else:
         form = PasswordChangeForm(user=request.user)
-        args = {'form': form}
+    args = {'form': form}
 
-        return render(request, 'login/changepassword.html', args)
+    return render(request, 'login/changepassword.html', args)
 
 
 # error handling
