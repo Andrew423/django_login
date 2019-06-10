@@ -33,7 +33,6 @@ handler500 = user_views.handler500
 urlpatterns = [
 
     # path to views via methods
-    path('admin/', admin.site.urls),
     path('', user_views.home, name='home'),
     path('home/', user_views.home_redirect, name='home_redirect'),
     path('register/', user_views.register, name="register"),
