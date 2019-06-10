@@ -1,5 +1,7 @@
 # Django Project
 
+** School Project ** is in hand-in branch
+
 ## About
 This is my second Django project transferred on to the second, school account and is a login app.
 It is also being expanded to include a shopping cart option.
