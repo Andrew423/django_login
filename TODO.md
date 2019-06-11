@@ -24,9 +24,12 @@
 
 ## Results:
 
+ * (bug) when the registration form is done incorrectly, a 500 error is given (fixed)
+
  [/] - Publish on AWS (this was more complicated than I realised)
 
  [x] - Beta testing
 
 ## Results:
 
+ * clean and precise program
