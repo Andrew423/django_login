@@ -26,6 +26,8 @@
 
  * (bug) when the registration form is done incorrectly, a 500 error is given (fixed)
 
+ * responses @ [link] (https://docs.google.com/forms/d/1xyCBomikJFzG6nfOxDum2yMxSo1UgdB64EKQ8AHau7o/edit)
+
  [/] - Publish on AWS (this was more complicated than I realised)
 
  [x] - Beta testing
